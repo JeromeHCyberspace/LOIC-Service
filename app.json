@@ -1,0 +1,15 @@
+{
+  "env": {
+    "ROOT_PW": "Your service IP's root password",
+    "HACKING_GROUP_ID": "Your Hacking Group ID, from My Account -> Settings"
+  },
+  "addons": [
+    "papertrail",
+    "heroku-postgresql:hobby-dev",
+    "redistogo:nano"
+  ],
+  "success_url": "/postinstall.php",
+  "scripts": {
+    "postdeploy": "php setup_database.php"
+  }
+}
